@@ -1,2 +1,13 @@
 MOOSH
 =====
+Basically, this is an attempt to create a text-based multiplayer RPG server.
+There are a number of reasonable ones, but they were designed in
+the adolesence of the Internet before GUIs and the Web were
+universal. 
+
+What we want to do here is take the basic concepts and update
+them to use the last 20-some years of innovations and progress.
+To this end, we are assuming an RDBMS as backing store, using a
+modern language (Ada) for development and taking advantage of
+multithreading and the other features of modern computing
+devices.
