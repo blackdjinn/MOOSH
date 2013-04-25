@@ -1,0 +1,21 @@
+project Moosh is
+
+   package Ide is
+      for Vcs_Kind use "Git";
+      for Vcs_Repository_Root use "/home/ryan/src/MOOSH";
+      for Documentation_Dir use "../doc";
+   end Ide;
+
+   for Source_Dirs use ("./**");
+   for Exec_Dir use "..";
+
+   package Builder is
+      for Default_Switches ("ada") use ("-j2");
+   end Builder;
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-gnatf");
+   end Compiler;
+
+end Moosh;
+
