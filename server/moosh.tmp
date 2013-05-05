@@ -1,8 +1,9 @@
 with NetConnect;
 with Logger; use Logger;
 with B32Integer;
-with b32_IO; use b32_IO;
 
+with Ada.Text_IO;
+package b32_IO is new Ada.Text_IO.Integer_IO(b32U);
 
 procedure moosh is
 begin
