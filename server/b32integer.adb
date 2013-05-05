@@ -1,5 +1,13 @@
 --with Ada.Unbounded_Strings;
 package body B32Integer is
+
+   type b32Char is (
+      '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K',
+      'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W',
+      'X', 'Y');
+
+
    function Charval(C:Character) return b32U is
    begin
       case C is
