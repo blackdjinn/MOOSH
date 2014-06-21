@@ -1,12 +1,8 @@
 -- Logging package. Eventually support different backends.
 --
 with Ada.Text_IO; use Ada.Text_IO;
+with GNAT.Time_Stamp; use GNAT.Time_Stamp;
 package body Logger is
-
-   function ISOdate return String is
-   begin
-      return "0000000000.00";
-   end ISOdate;
 
    function Priority_String (pri: Priority) return String is
    begin
@@ -17,7 +13,7 @@ package body Logger is
          when Fatal   => return "FTL";
          when Debug   => return "Dbg";
          when Anal    => return "Anl";
-         when others => return "???";
+         when others  => return "???"; -- This should never happen.
       end case;
    end Priority_String;
 
@@ -28,7 +24,7 @@ package body Logger is
    
    procedure Log (pri: Priority; message: String) is
    begin
-      Put_Line (Priority_String(pri) & " " & ISOdate & "| " & message);
+      Put_Line (Priority_String(pri) & " " & Current_Time & "| " & message);
    end Log;
    --procedure Log_Target_File (filename: String;);
 end Logger;
