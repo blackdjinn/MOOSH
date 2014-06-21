@@ -13,7 +13,7 @@ package body Logger is
    end Log;
    --procedure Log_Target_File (filename: String;);
 
-   function ISOdate : String is
+   function ISOdate return String is
    begin
       return "0000000000.00";
    end ISOdate;
