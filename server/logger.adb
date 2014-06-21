@@ -2,16 +2,6 @@
 --
 with Ada.Text_IO; use Ada.Text_IO;
 package body Logger is
-   procedure Log (message : String ) is -- defaults to 'Info'
-   begin
-      Log(Info,message);
-   end Log;
-   
-   procedure Log (pri: Priority; message: String) is
-   begin
-      Put_Line (Priority_String(pri) & " " & ISOdate & "| " & message);
-   end Log;
-   --procedure Log_Target_File (filename: String;);
 
    function ISOdate return String is
    begin
@@ -31,4 +21,14 @@ package body Logger is
       end case;
    end Priority_String;
 
+   procedure Log (message : String ) is -- defaults to 'Info'
+   begin
+      Log(Info,message);
+   end Log;
+   
+   procedure Log (pri: Priority; message: String) is
+   begin
+      Put_Line (Priority_String(pri) & " " & ISOdate & "| " & message);
+   end Log;
+   --procedure Log_Target_File (filename: String;);
 end Logger;
