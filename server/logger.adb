@@ -17,7 +17,7 @@ package body Logger is
          when Fatal   => return "FTL";
          when Debug   => return "Dbg";
          when Anal    => return "Anl";
-         when otthers => return "???";
+         when others => return "???";
       end case;
    end Priority_String;
 
