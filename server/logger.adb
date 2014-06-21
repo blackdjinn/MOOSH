@@ -7,7 +7,7 @@ package body Logger is
       Log(Info,message);
    end Log;
    
-   procedure Log (pri: Priority; message: String;) is
+   procedure Log (pri: Priority; message: String) is
    begin
       Put_Line (Priority_String(pri) & " " & ISOdate & "| " & message);
    end Log;
