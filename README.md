@@ -3,6 +3,13 @@ MOOSH
 
 This project is defunct. I'm not working on it anymore and have started a wholly different project.
 
+The new project can be found at: https://github.com/blackdjinn/tms
+
+Please enjoy responsibly.
+--------
+
+
+
 Basically, this is an attempt to create a text-based multiplayer RPG server.
 There are a number of reasonable ones, but they were designed in
 the adolesence of the Internet before GUIs and the Web were
